@@ -14,3 +14,8 @@ with col2:
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     """
     st.info(content)
+
+content2="""
+Abaixo podes ver e fazer muitas coisas construidas em python. Contacta-me
+"""
+st.write(content2)
