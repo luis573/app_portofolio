@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas  #Lê os csv
 
 st.set_page_config(layout="wide")
 
@@ -19,3 +20,20 @@ content2="""
 Abaixo podes ver e fazer muitas coisas construidas em python. Contacta-me
 """
 st.write(content2)
+
+
+
+col3,col4 = st.columns(2)
+
+df=pandas.read_csv("data.csv",sep=";") #abre o ficheiro w atribui-o a uma data frame
+
+print(df)
+
+with col3:
+    for index,row in df[:10].iterrows():
+        st.header(row["title"])
+
+
+with col4:
+    for index,row in df[10:].iterrows():
+        st.header(row["title"])
